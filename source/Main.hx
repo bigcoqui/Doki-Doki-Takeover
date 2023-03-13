@@ -137,7 +137,7 @@ class Main extends Sprite
 		dateNow = dateNow.replace(" ", "_");
 		dateNow = dateNow.replace(":", "'");
 
-		path = './crash/DDTO_$dateNow.txt';
+		path = 'crash/DDTO_$dateNow.txt';
 
 		for (stackItem in callStack)
 		{
@@ -155,8 +155,8 @@ class Main extends Sprite
 			+ "\nPlease report this error to the GitHub page: https://github.com/Jorge-SunSpirit/Doki-Doki-Takeover\n\n> Crash Handler written by: sqirra-rng";
 			//+ "\nPlease report this error to #playtest-qa-testing.\n\n> Crash Handler written by: sqirra-rng";
 
-		if (!FileSystem.exists("./crash/"))
-			FileSystem.createDirectory("./crash/");
+		if (!FileSystem.exists("crash/"))
+			FileSystem.createDirectory("crash/");
 
 		File.saveContent(path, errMsg + "\n");
 
